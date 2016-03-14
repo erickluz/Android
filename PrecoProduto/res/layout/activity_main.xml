@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".LinearLayout" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/codProd" />
+
+    <EditText
+        android:id="@+id/txtCodProd"
+        android:labelFor="@+id/txtCodProd"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:inputType="number"/>
+    
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="@string/qtd" />
+ 
+    <EditText
+        android:id="@+id/txtQtdProd"
+        android:labelFor="@+id/txtQtdProd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+    
+    <Button 
+        android:id="@+id/btnOk"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:text="@string/btnOk"
+        android:onClick="btnOkClick" />
+
+    <TextView
+        android:id="@+id/lblVlrTotal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="32sp" />
+    
+</LinearLayout>

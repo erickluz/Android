@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cardapio Lancheria</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="chachorroQuente">Chachorro Quente: </string>
+    <string name="bauruSimples">Bauru Simples: </string>
+    <string name="bauruCOvo">Bauro C/ Ovo: </string>
+    <string name="hamburguer">Hamburguer</string>
+    <string name="cheeseburger">Cheeseburger: </string>
+    <string name="refrigerante">Refrigerante</string>
+    <string name="codigoLanche">Codigo Lanche: </string>
+    <string name="qtd">Quantidade: </string>
+    <string name="valorTotal"> </string>
+    <string name="OK">OK</string>
+
+</resources>

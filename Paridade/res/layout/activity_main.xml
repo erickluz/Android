@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".LinearLayout" >
+    
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digite" />
+
+    <EditText 
+        android:id="@+id/edtNumero"
+        android:labelFor="@+id/edtNumero"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"       
+        android:inputType="numberSigned"
+        />
+    
+    <Button 
+        android:id="@+id/Paridade"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="@string/paridade"  
+        android:onClick="btnParidade"
+        />
+    
+    <TextView
+        android:id="@+id/lblParidade"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="42sp"
+        android:text="@string/lblParidade"
+        />
+    
+    <TextView
+        android:id="@+id/lblPositivo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="42sp"
+        
+        />
+        
+</LinearLayout>
