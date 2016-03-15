@@ -1,0 +1,26 @@
+package com.erick.conversaodistancia;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	EditText txtPes;
+	TextView lblPolegadas;
+	TextView lblJardas;
+	TextView lblMilhas;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		txtPes = (EditText) findViewById(R.id.txtPes);
+		
+	}
+
+}

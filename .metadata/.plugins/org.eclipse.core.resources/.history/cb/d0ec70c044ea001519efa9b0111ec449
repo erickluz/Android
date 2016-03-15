@@ -1,0 +1,36 @@
+package com.erick.celsiustofahrenheit;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	EditText txtCelcius;
+	EditText txtFahrenheit;
+	TextView lblTemperatura;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		txtCelcius = (EditText) findViewById(R.id.txtCelcius);
+		txtFahrenheit = (EditText) findViewById(R.id.txtFahrenheit);
+		lblTemperatura = (TextView) findViewById(R.id.lblFahrenheit);
+		
+		
+	}
+
+	public void btnConverterClick(View v){
+		
+		Double celcius = Double.parseDouble(txtCelcius.getText().toString());
+		Double fahrenheit = Double.parseDouble(txtFahrenheit.getText().toString());
+		
+		
+		
+	}
+
+}
