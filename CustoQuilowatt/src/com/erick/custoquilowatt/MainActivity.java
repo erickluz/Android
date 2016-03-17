@@ -1,0 +1,54 @@
+package com.erick.custoquilowatt;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	EditText txtSalMinimo;
+	EditText txtQtdQuiloWatt;
+	TextView lblVlrQuiloWatt;
+	TextView lblVlrPago;
+	TextView lblVlrPagoDesc;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		txtSalMinimo = (EditText) findViewById(R.id.txtSalMinimo);
+		txtQtdQuiloWatt = (EditText) findViewById(R.id.txtQtdQuilowatt);
+		lblVlrPago = (TextView) findViewById(R.id.lblVlrPago);
+		lblVlrPagoDesc = (TextView) findViewById(R.id.lblVlrPagoDesc);
+		lblVlrQuiloWatt = (TextView) findViewById(R.id.lblVlrQuiloWatt);
+
+	}
+
+	public void btnCalc(View v) {
+
+		Double salMinimo = Double.parseDouble(txtSalMinimo.getText().toString());
+		Double qtdQuilowatt = Double.parseDouble(txtQtdQuiloWatt.getText().toString());
+
+		Double vlrQuilowatt = salMinimo / 5;
+		Double vlrPago = vlrQuilowatt * qtdQuilowatt;
+		Double vlrPagoDesc = vlrPago - ((vlrPago * 15) / 100);
+
+		lblVlrQuiloWatt.setText("R$" + vlrQuilowatt);
+		lblVlrPago.setText("R$" + vlrPago);
+		lblVlrPagoDesc.setText("R$" + vlrPagoDesc);
+
+		escondeTeclado();
+	}
+
+	public void escondeTeclado() {
+		InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+		imm.hideSoftInputFromWindow(lblVlrPagoDesc.getWindowToken(), 0);
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+	}
+
+}

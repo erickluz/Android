@@ -1,0 +1,48 @@
+package com.erick.equacaosegundograu;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	
+	TextView lblX1;
+	TextView lblX2;
+	EditText txtA;
+	EditText txtB;
+	EditText txtC;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		lblX1 = (TextView) findViewById(R.id.lblX1);
+		lblX2 = (TextView) findViewById(R.id.lblX2);
+		txtA = (EditText) findViewById(R.id.txtA);
+		txtB = (EditText) findViewById(R.id.txtB);
+		txtC = (EditText) findViewById(R.id.txtC);
+		
+	}
+
+	
+	public void btnOk(View v){
+		
+		Double a = Double.parseDouble(txtA.getText().toString());
+		Double b = Double.parseDouble(txtB.getText().toString());
+		Double c = Double.parseDouble(txtC.getText().toString());
+		
+		Double delta = (Math.pow(b, 2)) - 4 * a * c;
+		
+		if (delta < 0){
+			txtA.setText("Delta igual a 0, as raízes não possuem");
+		}
+		
+	}
+	
+
+}

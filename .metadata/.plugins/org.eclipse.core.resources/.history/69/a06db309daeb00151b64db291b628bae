@@ -1,0 +1,31 @@
+package com.erick.posicaovelocidade;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	EditText txtS0;
+	EditText txtV0;
+	EditText txtA;
+	EditText txtT;
+	TextView lblS;
+	TextView lblV;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		txtS0 = (EditText) findViewById(R.id.txtS0);
+		txtV0 = (EditText) findViewById(R.id.txtV0);
+		
+	}
+
+	public void btnOk(View v) {
+
+	}
+}

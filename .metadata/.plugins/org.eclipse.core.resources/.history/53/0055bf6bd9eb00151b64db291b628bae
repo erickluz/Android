@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Posicao e Velocidade</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="s0">s0: </string>
+    <string name="v0">v0:</string>
+    <string name="a">a:</string>
+    <string name="t">t:</string>
+
+</resources>
